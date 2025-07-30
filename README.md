@@ -97,12 +97,14 @@ Kompentesi 3
 ### 1.1 Entitas sistem diidentifikasi sesuai dokumen perancangan.
 
 ```
+```
 Contoh: Pada sistem perpustakaan, entitasnya meliputi Anggota, Buku, Peminjaman, dan Petugas.
 
 ### 1.2 Diagram dibuat dari entitas yang telah didefinisikan, seperti ERD (Entity Relationship Diagram) atau Class Diagram, untuk menggambarkan hubungan antar entitas.
 
 ### 2.1 Query dibuat untuk menghasilkan informasi yang diperlukan aplikasi secara efisien.
 
+```
 ```
 Contoh:
 
@@ -111,6 +113,7 @@ SELECT nama_buku, nama_anggota
 FROM peminjaman 
 JOIN buku ON peminjaman.id_buku = buku.id_buku 
 JOIN anggota ON peminjaman.id_anggota = anggota.id_anggota;
+```
 
 ### 2.2 Diagram entitas dan hubungan (ERD) yang telah diidentifikasi diimplementasikan menggunakan tools seperti MySQL Workbench, phpMyAdmin, atau SQL Server Management Studio untuk membentuk struktur database sesuai rancangan.
 
@@ -119,10 +122,12 @@ JOIN anggota ON peminjaman.id_anggota = anggota.id_anggota;
 ### 1.1 Platform/lingkungan dipilih sesuai kebutuhan aplikasi.
 
 ```
+```
 Contoh: Android membutuhkan Android Studio di OS Windows/Linux/Mac; iOS membutuhkan Xcode di macOS.
 
 ### 1.2 Tools bahasa pemrograman dipilih sesuai kebutuhan pengembangan.
 
+```
 ```
 Contoh: Kotlin/Java untuk Android, Swift untuk iOS, Flutter (Dart) untuk aplikasi cross-platform.
 
@@ -133,12 +138,14 @@ Contoh: Kotlin/Java untuk Android, Swift untuk iOS, Flutter (Dart) untuk aplikas
 ### 3.1 Script sederhana dibuat menggunakan tools pemrograman yang telah di-install.
 
 ```
+```
 Contoh (Kotlin – Android Studio):
 
 ```kotlin
 fun main() {
     println("Hello Mobile App")
 }
+```
 ### 3.2 Script dijalankan dengan benar pada emulator/perangkat dan menghasilkan output sesuai skenario, misalnya menampilkan teks "Hello Mobile App" di layar.
 
 # Kompetensi 6
@@ -172,12 +179,14 @@ Testing aplikasi melalui browser setelah menjalankan server lokal.
 ### 1.1 Parameter masukan dan keluaran diidentifikasi.
 
 ```
+```
 Contoh: Fungsi getUserById($id) menerima parameter $id dan mengembalikan data user dari database.
 
 ### 1.2 Jenis passing parameter di CI3 menggunakan by value (nilai dikirim ke fungsi). Jika ingin efek langsung ke variabel, dapat menggunakan by reference dengan &.
 
 ### 1.3 Fungsi reusable diimplementasikan dalam helper atau library CI3 agar dapat digunakan di berbagai controller.
 
+```
 ```
 Contoh Helper (application/helpers/custom_helper.php):
 
@@ -186,9 +195,11 @@ function formatTanggal($tanggal) {
     return date('d-m-Y', strtotime($tanggal));
 }
 Fungsi ini bisa dipanggil di seluruh aplikasi setelah helper diload.
+```
 
 ### 2.1 Reusable function/module yang sudah ada diidentifikasi.
 
+```
 ```
 Contoh internal CI3: helper bawaan (url_helper, form_helper), library (session, email), atau helper custom yang dibuat programmer.
 
@@ -198,6 +209,7 @@ Contoh internal CI3: helper bawaan (url_helper, form_helper), library (session, 
 
 ### 1.1 Penamaan file, fungsi, variabel, dan konstanta dibuat sesuai konteks agar mudah dipahami.
 
+```
 ```
 Contoh: File User_model.php, fungsi getUserById($id), variabel $userData, konstanta BASE_URL.
 
@@ -213,6 +225,7 @@ Author, versi, dan tanggal pembuatan.
 
 ### 2.1 Folder dan sub-folder disusun sesuai konteks agar mudah dikelola.
 
+```
 ```
 Contoh pada CI3:
 
@@ -235,17 +248,21 @@ Struktur ini memisahkan logika (MVC) dan aset frontend.
 
 ### 1.1 Program menggunakan class dibuat untuk mengelola logika secara OOP.
 ```
+```
 Contoh: Class User digunakan untuk menyimpan dan menampilkan data pengguna.
 
 ### 1.2 Properti dan metode (fungsi/prosedur) didefinisikan di dalam class sesuai kebutuhan.
+```
 ```
 Contoh: Properti $name dan metode greet() ditambahkan ke dalam class.
 
 ### 1.3 Data dalam class dibuat mandiri (enkapsulasi), tidak bergantung langsung pada variabel global.
 ```
+```
 Contoh: Nilai $name diatur melalui constructor, bukan variabel global.
 
 ### 1.4 Hak akses properti/metode diatur menggunakan private, protected, atau public.
+```
 ```
 Contoh Implementasi:
 
@@ -253,6 +270,7 @@ Contoh Implementasi:
 <?php
 class User {
     private $name;
+```
 
     public function __construct($name) {
         $this->name = $name;
@@ -269,12 +287,15 @@ echo $user->greet();
 
 ### 2.1 Tipe data diidentifikasi.
 ```
+```
 Contoh: Class memiliki properti $name (string) dan $age (integer).
 
 ```php
 private $name; // string
 private $age;  // int
+```
 ### 2.2 Sintaks program dikuasai dengan bahasa pemrogramannya.
+```
 ```
 Contoh: Constructor digunakan untuk menginisialisasi data, dan metode dibuat dengan sintaks PHP.
 
@@ -283,7 +304,9 @@ public function __construct($name, $age) {
     $this->name = $name;
     $this->age  = $age;
 }
+```
 ### 2.3 Control program dikuasai.
+```
 ```
 Contoh: Menggunakan if-else untuk menentukan status usia.
 
@@ -295,8 +318,10 @@ public function checkAge() {
         return $this->name . " masih di bawah umur.";
     }
 }
+```
 
 ### 3.1 Inheritance pada class diterapkan.
+```
 ```
 Contoh: Class Admin mewarisi (extends) class User.
 
@@ -310,6 +335,7 @@ class User {
         return $this->name;
     }
 }
+```
 
 class Admin extends User {
     public function getRole() {
@@ -317,6 +343,7 @@ class Admin extends User {
     }
 }
 ### 3.2 Polymorphism pada class diterapkan.
+```
 ```
 Contoh: Method getRole() di Admin bisa memiliki perilaku berbeda dibanding User.
 
@@ -326,6 +353,7 @@ class Member extends User {
         return $this->name . " adalah Member.";
     }
 }
+```
 
 // Penggunaan Polymorphism
 $users = [new Admin("Wahyu"), new Member("Andi")];
@@ -333,11 +361,13 @@ foreach ($users as $u) {
     echo $u->getRole() . "<br>";
 }
 ```
+```
 Output:
 
 ```nginx
 Wahyu adalah Admin.
 Andi adalah Member.
+```
 ### 3.3 Overloading pada class diterapkan.
 Di PHP, overloading dilakukan dengan __call() untuk menangani pemanggilan metode yang tidak ada.
 
@@ -347,6 +377,7 @@ class DynamicCall {
         return "Metode '$method' dipanggil dengan argumen: " . implode(", ", $args);
     }
 }
+```
 
 $obj = new DynamicCall();
 echo $obj->sayHello("Wahyu");
@@ -360,6 +391,7 @@ interface UserInterface {
     public function getName();
     public function getRole();
 }
+```
 
 class Admin implements UserInterface {
     private $name;
@@ -377,10 +409,12 @@ class Admin implements UserInterface {
 $admin = new Admin("Wahyu");
 echo $admin->getName() . " adalah " . $admin->getRole();
 ```
+```
 Output:
 
 ```nginx
 Wahyu adalah Admin
+```
 ### 4.2 Paket dengan program dibuat.
 Dalam PHP/CI3, paket bisa diorganisir menggunakan namespace atau folder agar kode lebih terstruktur.
 
@@ -388,6 +422,7 @@ Dalam PHP/CI3, paket bisa diorganisir menggunakan namespace atau folder agar kod
 <?php
 // File: application/libraries/UserPackage/User.php
 namespace UserPackage;
+```
 
 class User {
     public function info() {
@@ -407,15 +442,18 @@ class Test extends CI_Controller {
 
 ### 5.1 Kesalahan dapat dikoreksi.
 ```
+```
 Contoh: Saat program dijalankan, jika terjadi error (misalnya salah penulisan nama metode), perbaiki sintaks atau logika.
 
 ```php
 // Salah: memanggil metode yang tidak ada
 echo $user->getname(); // error karena huruf kecil
+```
 
 // Diperbaiki:
 echo $user->getName(); // benar
 ### 5.2 Program bebas salah sintaks dihasilkan.
+```
 ```
 Contoh: Setelah debugging, program dapat dijalankan tanpa error dan menampilkan output yang sesuai.
 
@@ -430,6 +468,7 @@ class User {
         return $this->name;
     }
 }
+```
 
 // Program berjalan tanpa error
 $user = new User("Wahyu");
@@ -439,13 +478,16 @@ echo "Halo, " . $user->getName();
 
 ### 1.1 Class unit-unit reuse (dari aplikasi lain) yang sesuai dapat diidentifikasi.
 ```
+```
 Contoh: Menggunakan class Email bawaan CodeIgniter 3 untuk mengirim email tanpa harus membuat dari nol.
 
 ### 1.2 Keuntungan efisiensi dari pemanfaatan komponen reuse dapat dihitung.
 ```
+```
 Contoh: Dengan menggunakan library Email CI3, waktu pengembangan fitur email berkurang drastis karena tidak perlu menulis kode SMTP manual.
 
 ### 1.3 Lisensi, Hak cipta, dan hak paten tidak dilanggar dalam pemanfaatan komponen reuse tersebut.
+```
 ```
 Contoh: Library CI3 berlisensi MIT, sehingga aman digunakan dalam proyek.
 Jika menggunakan library pihak ketiga, pastikan lisensinya (MIT, GPL, Apache) tidak melanggar hak cipta.
@@ -458,11 +500,13 @@ Gunakan $this->load->library('encryption') dari CI3, bukan metode enkripsi lama 
 
 ### 2.3 Program yang dihubungkan dengan library ditetapkan.
 ```
+```
 Contoh implementasi enkripsi dan dekripsi:
 
 ```php
 <?php
 class Test extends CI_Controller {
+```
 
     public function index() {
         // Load library encryption
@@ -494,22 +538,27 @@ Memastikan kompatibilitas kode setelah pembaruan.
 
 ### 3.2 Pembaharuan library atau komponen pre-existing berhasil dilakukan.
 ```
+```
 Contoh: Update library Encryption CI3 dengan versi terbaru agar mendukung algoritma enkripsi yang lebih kuat.
 
 # Kompetensi 11
 
 ### 1.1 Perangkat lunak aplikasi SQL telah dipasang.
 ```
+```
 Contoh: Menginstal MySQL/MariaDB menggunakan XAMPP, Laragon, atau installer resmi MySQL.
 
 ```bash
+```
 # Contoh instalasi di Linux
 sudo apt install mysql-server
 ### 1.2 Perangkat lunak aplikasi SQL dijalankan.
 ```
+```
 Contoh: Menjalankan MySQL dari terminal atau service control.
 
 ```bash
+```
 # Menjalankan MySQL Service
 sudo service mysql start
 
@@ -529,11 +578,13 @@ DELETE → menghapus data
 
 ### 2.2 Fitur pengolahan DML dieksekusi sesuai kebutuhan.
 ```
+```
 Contoh query DML di MySQL:
 
 ```sql
 -- Menambahkan data
 INSERT INTO users (name, email) VALUES ('Wahyu', 'wahyu@example.com');
+```
 
 -- Mengambil data
 SELECT * FROM users;
@@ -546,19 +597,24 @@ DELETE FROM users WHERE name = 'Wahyu';
 
 ### 3.1 Tabel diisi data menggunakan perintah DML.
 ```
+```
 Contoh:
 
 ```sql
 INSERT INTO users (id, name, email) VALUES (1, 'Wahyu', 'wahyu@example.com');
+```
 ### 3.2 Indeks dibangkitkan.
+```
 ```
 Contoh:
 
 ```sql
 CREATE INDEX idx_email ON users(email);
 Indeks mempercepat pencarian data berdasarkan kolom email.
+```
 
 ### 3.3 View tabel dibentuk sesuai kebutuhan.
+```
 ```
 Contoh:
 
@@ -566,11 +622,13 @@ Contoh:
 CREATE VIEW user_view AS
 SELECT name, email FROM users WHERE id > 0;
 View user_view menampilkan data yang sudah difilter dari tabel users.
+```
 
 ### 4.1 Fitur pengolahan DML diidentifikasikan.
 Fitur DML yang digunakan: JOIN, UNION, INSERT, UPDATE, DELETE, dan SELECT dengan kondisi relasi antar tabel.
 
 ### 4.2 Perintah DML dipergunakan untuk manipulasi antar tabel.
+```
 ```
 Contoh menggunakan JOIN antar tabel users dan orders:
 
@@ -578,7 +636,9 @@ Contoh menggunakan JOIN antar tabel users dan orders:
 SELECT users.name, orders.product 
 FROM users 
 JOIN orders ON users.id = orders.user_id;
+```
 ### 4.3 Perintah DML dipergunakan untuk manipulasi antar-view.
+```
 ```
 Contoh manipulasi menggunakan view:
 
@@ -588,10 +648,12 @@ CREATE VIEW user_orders AS
 SELECT u.name, o.product 
 FROM users u 
 JOIN orders o ON u.id = o.user_id;
+```
 
 -- Mengambil data dari view
 SELECT * FROM user_orders;
 ### 4.4 Perintah DML ditulis secara efisien.
+```
 ```
 Contoh penggunaan alias dan kondisi untuk optimasi:
 
@@ -601,13 +663,16 @@ FROM users u
 LEFT JOIN orders o ON u.id = o.user_id 
 WHERE u.status = 'active' 
 GROUP BY u.name;
+```
 
 ### 5.1 Stored procedure dibuat dengan perintah SQL.
+```
 ```
 Contoh membuat stored procedure untuk mengambil data user berdasarkan ID:
 
 ```sql
 DELIMITER $$
+```
 
 CREATE PROCEDURE getUserById(IN userId INT)
 BEGIN
@@ -619,10 +684,12 @@ END$$
 DELIMITER ;
 ### 5.2 Prosedur diuji diperiksa input dan output-nya.
 ```
+```
 Contoh pengujian prosedur:
 
 ```sql
 CALL getUserById(1);
+```
 ```
 Output:
 
@@ -632,13 +699,16 @@ Output:
 +-------+--------------------+
 | Wahyu | wahyu@example.com |
 +-------+--------------------+
+```
 
 ### 6.1 Function dibuat dengan perintah SQL.
+```
 ```
 Contoh membuat SQL function untuk menghitung total pesanan user:
 
 ```sql
 DELIMITER $$
+```
 
 CREATE FUNCTION totalOrders(userId INT) 
 RETURNS INT
@@ -656,11 +726,14 @@ DELIMITER ;
 Fungsi menggunakan query COUNT(*) dengan filter WHERE, sehingga hanya satu query yang dieksekusi.
 
 ```
+```
 ✅ Pengujian Function
 ```sql
 SELECT totalOrders(1) AS jumlah_pesanan;
+```
 
 ### 7.1 Trigger didefinisikan dengan perintah SQL.
+```
 ```
 Contoh membuat trigger untuk mencatat log setiap kali data user ditambahkan:
 
@@ -671,6 +744,7 @@ CREATE TABLE user_log (
     action VARCHAR(50),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
 DELIMITER $$
 
@@ -689,13 +763,16 @@ Pengujian dengan menambahkan data baru:
 ```sql
 INSERT INTO users (name, email) VALUES ('Andi', 'andi@example.com');
 SELECT * FROM user_log;
+```
 
 ### 8.1 Perubahan data dengan perintah commit dilakukan.
+```
 ```
 Contoh: Menyimpan data user dengan transaksi dan commit jika berhasil.
 
 ```php
 $this->db->trans_start();
+```
 
 $this->db->insert('users', [
     'name'  => 'Wahyu',
@@ -708,6 +785,7 @@ Jika terjadi error, transaksi dibatalkan secara otomatis atau manual dengan roll
 
 ```php
 $this->db->trans_begin();
+```
 
 $this->db->insert('users', [
     'name'  => 'Andi',
@@ -724,6 +802,7 @@ if ($this->db->trans_status() === FALSE) {
 
 ### 1.1 Data dapat disimpan/diubah ke dalam format basis data.
 ```
+```
 Contoh menyimpan dan mengubah data menggunakan Query Builder CI3:
 
 ```php
@@ -732,11 +811,13 @@ $this->db->insert('users', [
     'name'  => 'Wahyu',
     'email' => 'wahyu@example.com'
 ]);
+```
 
 // Update data
 $this->db->where('id', 1);
 $this->db->update('users', ['email' => 'baru@example.com']);
 ### 1.2 Informasi yang diinginkan dapat dihasilkan menggunakan query tersebut.
+```
 ```
 Contoh mengambil data dengan kondisi tertentu:
 
@@ -744,13 +825,16 @@ Contoh mengambil data dengan kondisi tertentu:
 $query = $this->db->get_where('users', ['id' => 1]);
 $user  = $query->row();
 echo $user->name . " - " . $user->email;
+```
 ### 1.3 Indeks dipergunakan untuk mempercepat akses.
 Indeks dibuat di database (MySQL) agar query lebih cepat.
+```
 ```
 Contoh membuat indeks dengan raw query CI3:
 
 ```php
 $this->db->query("CREATE INDEX idx_email ON users(email)");
+```
 
 ### 2.1 Library akses basis data dapat diterapkan.
 CI3 menyediakan Database Library untuk memudahkan koneksi dan query database.
@@ -758,14 +842,17 @@ Aktifkan otomatis di application/config/autoload.php:
 
 ```php
 $autoload['libraries'] = array('database');
+```
 ### 2.2 Perintah akses data yang relevan dengan teknologi atau jenis baru data diterapkan untuk mengakses data.
 Gunakan Query Builder CI3 untuk akses database secara aman dan efisien.
 
+```
 ```
 ✅ Contoh Prosedur Akses (Menggunakan Model)
 ```php
 <?php
 class User_model extends CI_Model {
+```
 
     // Ambil semua data user
     public function getAll() {
@@ -788,10 +875,12 @@ class User_model extends CI_Model {
     }
 }
 ```
+```
 ✅ Contoh Penggunaan di Controller
 ```php
 <?php
 class Users extends CI_Controller {
+```
 
     public function index() {
         $this->load->model('User_model');
@@ -802,6 +891,7 @@ class Users extends CI_Controller {
 
 ### 3.1 Teknologi koneksi yang sesuai dipilih.
 CI3 menggunakan Database Driver (MySQLi, PDO, Postgre, SQLite, dll).
+```
 ```
 Contoh konfigurasi MySQLi di application/config/database.php:
 
@@ -817,6 +907,7 @@ $db['default'] = array(
     'pconnect' => FALSE,
     'db_debug' => (ENVIRONMENT !== 'production'),
 );
+```
 ### 3.2 Keamanan koneksi ditentukan.
 Gunakan username & password database yang aman.
 
@@ -827,15 +918,18 @@ Terapkan SSL jika koneksi ke database eksternal.
 Hindari query manual tanpa query binding untuk mencegah SQL Injection.
 
 ```
+```
 Contoh Query Binding CI3:
 
 ```php
 $this->db->query("SELECT * FROM users WHERE email = ?", array($email));
+```
 ### 3.3 Hak setiap pengguna ditentukan.
 Buat akun database dengan hak akses terbatas.
 
 Misalnya, user aplikasi hanya diberi hak SELECT, INSERT, UPDATE, tanpa hak DROP.
 
+```
 ```
 Contoh SQL untuk membuat user dengan hak terbatas:
 
@@ -843,6 +937,7 @@ Contoh SQL untuk membuat user dengan hak terbatas:
 CREATE USER 'ci3_user'@'localhost' IDENTIFIED BY 'passwordku';
 GRANT SELECT, INSERT, UPDATE ON db_ci3.* TO 'ci3_user'@'localhost';
 FLUSH PRIVILEGES;
+```
 
 ### 4.1 Skenario pengujian disiapkan.
 Siapkan database dengan tabel dan data sample.
@@ -861,6 +956,7 @@ if ($user) {
 } else {
     echo "User tidak ditemukan";
 }
+```
 ### 4.3 Performansi mengacu pada kinerja statement akses data yang akan dibaca data diuji.
 Uji performa query dengan profiling CI3 untuk melihat waktu eksekusi query.
 
@@ -869,6 +965,7 @@ Aktifkan database profiler di controller:
 ```php
 $this->output->enable_profiler(TRUE);
 Profiler akan menampilkan waktu eksekusi query, jumlah query, dan informasi performa lainnya.
+```
 
 # Kompetensi 13
 
@@ -884,33 +981,39 @@ Boolean: true/false
 Float/Double: angka desimal
 
 ```
+```
 Contoh di PHP (CI3):
 
 ```php
 $umur = 25;          // int
 $nama = "Wahyu";     // string
 $isActive = true;    // boolean
+```
 ### 1.2 Variabel telah dijelaskan sesuai kaidah pemrograman.
 Variabel adalah tempat menyimpan data yang nilainya dapat berubah (varian).
 
 Penamaan harus jelas dan sesuai konvensi.
 
 ```
+```
 Contoh:
 
 ```php
 $userEmail = "user@example.com"; // nilai dapat berubah
+```
 ### 1.3 Konstanta telah dijelaskan sesuai kaidah pemrograman.
 Konstanta adalah variabel yang nilainya tidak dapat diubah (invarian).
 
 Di PHP, konstanta didefinisikan dengan define atau const.
 
 ```
+```
 Contoh:
 
 ```php
 define("APP_NAME", "My CI3 App");
 echo APP_NAME; // tidak dapat diubah
+```
 
 ### 2.1 Metode yang sesuai ditentukan.
 Pilih metode pemrograman: Prosedural atau OOP (Object-Oriented Programming).
@@ -932,6 +1035,7 @@ Controller memanggil Model → Model mengambil data → Controller mengirim data
 ### 3.1 Algoritma untuk sorting dibuat.
 Sorting digunakan untuk mengurutkan data.
 ```
+```
 Contoh algoritma Bubble Sort di PHP:
 
 ```php
@@ -948,15 +1052,18 @@ function bubbleSort($arr) {
     }
     return $arr;
 }
+```
 
 $data = [5, 3, 8, 1];
 print_r(bubbleSort($data));
+```
 ```
 Output:
 [1, 3, 5, 8]
 
 ### 3.2 Algoritma untuk searching dibuat.
 Searching digunakan untuk mencari data dalam array.
+```
 ```
 Contoh algoritma Linear Search:
 
@@ -969,6 +1076,7 @@ function linearSearch($arr, $target) {
     }
     return -1; // tidak ditemukan
 }
+```
 
 $data = [10, 20, 30, 40];
 echo linearSearch($data, 30); // output: 2
@@ -982,16 +1090,19 @@ Keduanya membantu code reuse agar tidak menulis kode yang sama berulang-ulang.
 
 ### 4.2 Prosedur dapat digunakan.
 ```
+```
 Contoh prosedur sederhana di PHP:
 
 ```php
 function tampilkanPesan($nama) {
     echo "Halo, $nama! Selamat datang.";
 }
+```
 
 // Pemanggilan prosedur
 tampilkanPesan("Wahyu");
 ### 4.3 Fungsi dapat digunakan.
+```
 ```
 Contoh fungsi yang mengembalikan nilai:
 
@@ -999,6 +1110,7 @@ Contoh fungsi yang mengembalikan nilai:
 function hitungLuasPersegi($sisi) {
     return $sisi * $sisi;
 }
+```
 
 // Pemanggilan fungsi
 $luas = hitungLuasPersegi(5);
@@ -1016,6 +1128,7 @@ O(n) → linear, bertambah seiring jumlah data.
 O(n²) → kuadratik, sangat lambat untuk data besar.
 
 ```
+```
 Contoh:
 
 Linear Search → O(n)
@@ -1027,6 +1140,7 @@ Kompleksitas memori (Space Complexity) mengukur berapa banyak memori yang diguna
 
 Jika algoritma membutuhkan array tambahan, memori akan meningkat.
 
+```
 ```
 Contoh:
 
@@ -1042,6 +1156,7 @@ Version Control System (VCS) adalah sistem yang mencatat setiap perubahan pada k
 Dengan VCS, developer dapat melacak, membatalkan, atau menggabungkan perubahan dengan mudah.
 
 ```
+```
 Contoh: Git, SVN, Mercurial.
 
 ### 1.2 Proses branching, merging, commit, check-in, check-out, dan cloning dapat dijelaskan.
@@ -1051,26 +1166,32 @@ Branching: Membuat cabang pengembangan terpisah.
 git branch fitur-login
 git checkout fitur-login
 Merging: Menggabungkan perubahan dari branch ke branch utama.
+```
 
 ```bash
 git merge fitur-login
 Commit: Menyimpan perubahan ke riwayat versi.
+```
 
 ```bash
 git add .
 git commit -m "Menambahkan fitur login"
 Check-in / Push: Mengirim perubahan ke repository remote (misalnya GitHub).
+```
 
 ```bash
 git push origin main
 Check-out: Berpindah ke versi atau branch tertentu.
+```
 
 ```bash
 git checkout main
 Cloning: Mengambil salinan repository dari remote.
+```
 
 ```bash
 git clone https://github.com/user/project.git
+```
 ### 1.3 Konsep repository dapat dijelaskan.
 Repository adalah tempat penyimpanan seluruh riwayat versi kode.
 
@@ -1105,9 +1226,11 @@ Dapat bekerja offline dan sinkronisasi ke remote repository.
 
 ### 2.4 Proses branching, merging, commit, check-in, check-out, dan cloning dilakukan.
 ```
+```
 Contoh penerapan Git:
 
 ```bash
+```
 # Clone repository
 git clone https://github.com/user/project.git
 
@@ -1131,6 +1254,7 @@ git push origin main
 Pilih tools yang sesuai untuk pengujian integrasi aplikasi.
 
 ```
+```
 Contoh tools:
 
 Postman → untuk menguji API
@@ -1151,6 +1275,7 @@ Skenario pengujian (apa yang diuji, input-output).
 Hasil pengujian (log error, hasil sukses/gagal).
 
 ```
+```
 Contoh Dokumen Sederhana:
 
 No	Fitur Diuji	Input	Output Diharapkan	Hasil
@@ -1169,6 +1294,7 @@ Data tidak valid → untuk menguji penanganan error.
 Data batas (boundary) → untuk menguji input ekstrem.
 
 ```
+```
 Contoh (pengujian login di CI3):
 
 Data valid: email=user@test.com, password=12345
@@ -1181,11 +1307,13 @@ Data uji dapat dibuat manual atau otomatis (menggunakan script atau generator).
 Untuk pengujian database, dapat menggunakan dummy data dengan SQL atau Faker library.
 
 ```
+```
 Contoh Membuat Data Dummy di SQL:
 
 ```sql
 INSERT INTO users (name, email, password) 
 VALUES ('Test User', 'user@test.com', MD5('12345'));
+```
 ```
 Contoh Menggunakan Faker di CI3:
 
@@ -1199,12 +1327,14 @@ for ($i = 0; $i < 10; $i++) {
     ];
     $this->db->insert('users', $data);
 }
+```
 
 ### 3.1 Modul program dijalankan sesuai dengan prosedur yang ditetapkan.
 Jalankan setiap modul (controller, model, view di CI3) sesuai urutan integrasi.
 
 Pastikan pengujian mengikuti prosedur: setup → eksekusi → verifikasi hasil.
 
+```
 ```
 Contoh:
 
@@ -1216,6 +1346,7 @@ Gunakan data uji (valid, invalid, boundary) yang telah disiapkan.
 Lakukan pengujian menggunakan skenario yang berbeda.
 
 ```
+```
 Contoh:
 
 Input: email=user@test.com, password=12345 → harus login berhasil.
@@ -1225,6 +1356,7 @@ Input: email=user@test.com, password=salah → harus tampil pesan error.
 ### 3.3 Hasil pengujian dicatat dalam lembar pengujian.
 Catat setiap hasil pengujian (sukses/gagal) dalam tabel dokumentasi.
 
+```
 ```
 Contoh Lembar Pengujian:
 
@@ -1244,6 +1376,7 @@ Bandingkan output aktual dari pengujian dengan expected output.
 Jika ada perbedaan, catat untuk perbaikan.
 
 ```
+```
 Contoh:
 
 Expected: Login sukses → Dashboard tampil.
@@ -1254,10 +1387,12 @@ Actual: Dashboard tidak tampil → modul perlu diperbaiki.
 Status hasil pengujian diberi tanda:
 
 ```
+```
 ✅ Pass jika sesuai
 
 ❌ Fail jika tidak sesuai
 
+```
 ```
 Contoh Lembar Pengujian:
 
@@ -1270,6 +1405,7 @@ No	Modul	Input	Expected Output	Actual Output	Status
 Catat semua tools/software yang digunakan untuk pengujian.
 
 ```
+```
 Contoh:
 
 No	Peralatan	Versi	Keterangan
@@ -1281,6 +1417,7 @@ No	Peralatan	Versi	Keterangan
 Catat semua kondisi (normal atau error) selama proses pengujian.
 
 ```
+```
 Contoh:
 
 Saat pengujian login, sistem sempat lambat karena koneksi database.
@@ -1290,6 +1427,7 @@ Saat pengujian transaksi, muncul error Undefined variable.
 ### 5.3 Data yang diimplementasikan dan data hasil pengujian dicatat.
 Rekam input data yang digunakan serta output yang dihasilkan.
 
+```
 ```
 Contoh:
 
@@ -1302,6 +1440,7 @@ Analisis hasil pengujian dilakukan, dicatat dalam dokumen, dan mengikuti standar
 
 Berisi: ringkasan hasil, status pass/fail, dan rekomendasi perbaikan.
 
+```
 ```
 Contoh Analisis:
 
@@ -1322,6 +1461,7 @@ Dapat berupa dokumen PDF, spreadsheet, atau laporan di sistem manajemen proyek.
 ### 6.3 Dokumentasi hasil pengujian diarsipkan.
 Semua dokumen hasil pengujian disimpan di repository atau server dokumentasi agar dapat diakses untuk audit/pengembangan berikutnya.
 
+```
 ```
 Contoh Struktur Laporan Pengujian Integrasi (CI3)
 1. Identitas Pengujian:
@@ -1355,11 +1495,13 @@ Kempetensi 16
 Tentukan fitur dan kemampuan utama sistem.
 
 ```
+```
 Contoh: Sistem penjualan mampu melakukan login, manajemen produk, transaksi, dan laporan.
 
 ### 1.2 Kebutuhan pelanggan disusun.
 Susun daftar kebutuhan pengguna berdasarkan hasil analisis.
 
+```
 ```
 Contoh:
 
@@ -1373,11 +1515,13 @@ Sistem harus memberikan laporan penjualan.
 Tentukan sumber atau standar yang digunakan dalam penyusunan petunjuk teknis (manual pengguna, dokumentasi API, standar UI).
 
 ```
+```
 Contoh: Mengacu pada User Manual Template ISO 9126.
 
 ### 1.4 Laporan petunjuk dibuat.
 Buat dokumen petunjuk teknis yang berisi cara penggunaan, instalasi, dan pemecahan masalah.
 
+```
 ```
 Contoh Ringkas Petunjuk Teknis CI3:
 
@@ -1401,6 +1545,7 @@ Petunjuk yang disampaikan kepada pengguna harus mengacu pada dokumen petunjuk te
 Disampaikan secara jelas, baik secara tatap muka maupun online.
 
 ```
+```
 Contoh:
 
 Memberikan demo penggunaan aplikasi penjualan CI3 sesuai langkah pada user manual.
@@ -1413,6 +1558,7 @@ Lakukan pelatihan pengguna berdasarkan materi yang telah disiapkan.
 Pelatihan dapat berupa: workshop, video tutorial, atau sesi langsung.
 
 ```
+```
 Contoh:
 
 Mengadakan sesi pelatihan untuk admin toko mengenai cara mengelola produk dan transaksi di aplikasi.
@@ -1423,6 +1569,7 @@ Memberikan latihan langsung kepada pengguna untuk mencoba fitur-fitur aplikasi.
 Semua feedback dari pengguna (bug, saran fitur, kendala penggunaan) harus dicatat, dianalisis, dan ditindaklanjuti.
 
 ```
+```
 Contoh:
 
 Pelanggan melaporkan error pada modul transaksi → tim mengevaluasi log error dan memperbaikinya.
@@ -1432,6 +1579,7 @@ Pelanggan meminta fitur export laporan → dimasukkan ke daftar pengembangan ber
 ### 3.2 Petunjuk teknis dapat dilakukan secara mandiri oleh pelanggan.
 Pastikan dokumentasi petunjuk teknis cukup jelas agar pengguna dapat mengatasi masalah sederhana tanpa bantuan developer.
 
+```
 ```
 Contoh:
 
@@ -1445,6 +1593,7 @@ FAQ disediakan untuk menjawab pertanyaan umum pengguna.
 Pastikan perangkat keras mendukung software yang akan diinstal.
 
 ```
+```
 Contoh:
 
 Untuk CI3, server harus memiliki PHP ≥ 5.6, MySQL, dan Apache/Nginx.
@@ -1454,6 +1603,7 @@ Untuk aplikasi Android, perangkat harus memiliki Android Studio dengan RAM minim
 ### 1.2 Langkah-langkah instalasi diidentifikasikan.
 Identifikasi setiap tahapan instalasi sebelum eksekusi.
 
+```
 ```
 Contoh Langkah Instalasi CI3:
 
@@ -1469,6 +1619,7 @@ Uji akses melalui browser http://localhost/ci3_app.
 Laksanakan proses instalasi sesuai langkah yang telah diidentifikasi.
 
 ```
+```
 Contoh Instalasi CI3:
 
 Salin folder CI3 ke htdocs.
@@ -1483,6 +1634,7 @@ Jalankan di browser untuk memastikan instalasi berhasil.
 Jika instalasi software terhambat karena hardware, lakukan troubleshooting.
 
 ```
+```
 Contoh:
 
 Error karena Apache tidak jalan → periksa port XAMPP.
@@ -1495,6 +1647,7 @@ Laptop tidak mendukung virtualisasi → aktifkan fitur virtualisasi di BIOS.'
 Tentukan data penting yang harus dicatat untuk keperluan monitoring, debugging, dan keamanan.
 
 ```
+```
 Contoh pada aplikasi CI3:
 
 Aktivitas login (user, waktu, IP).
@@ -1506,6 +1659,7 @@ Akses API (endpoint, status response).
 ### 1.2 Lama penyimpanan informasi log ditentukan.
 Tentukan kebijakan retensi log berdasarkan kebutuhan aplikasi dan regulasi.
 
+```
 ```
 Contoh:
 
@@ -1523,6 +1677,7 @@ Menyimpan log ke file custom di folder tertentu.
 Menyimpan log ke database untuk audit yang lebih detail.
 
 ```
+```
 Contoh Mekanisme di CI3:
 
 Semua error dan aktivitas penting akan dicatat menggunakan fungsi log_message('level', 'pesan');.
@@ -1531,11 +1686,13 @@ Semua error dan aktivitas penting akan dicatat menggunakan fungsi log_message('l
 Buat modul yang menangani pencatatan log otomatis.
 
 ```
+```
 Contoh Implementasi di CI3:
 
 ```php
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+```
 
 class Log_model extends CI_Model {
 
@@ -1556,9 +1713,11 @@ Pemanggilan di Controller:
 $this->load->model('Log_model');
 $this->Log_model->save_log('admin', 'login', 'User admin berhasil login');
 Alternatif Logging ke File (Bawaan CI3):
+```
 
 ```php
 log_message('info', 'User admin berhasil login pada ' . date('Y-m-d H:i:s'));
+```
 
 ### 3.1 Mekanisme pengumpulan log aplikasi untuk analisis ditentukan.
 Tentukan cara pengumpulan log agar dapat dianalisis dengan mudah, misalnya:
@@ -1570,6 +1729,7 @@ Mengambil log dari database jika log disimpan di tabel.
 Filter log berdasarkan tanggal, user, atau level (info, error, debug).
 
 ```
+```
 Contoh Mekanisme di CI3:
 
 Log error disimpan di file log CI3.
@@ -1580,13 +1740,16 @@ Log aktivitas user disimpan dalam tabel app_logs agar dapat di-query.
 Buat modul (Model + Controller) untuk membaca log dari database atau file.
 
 ```
+```
 ✅ Contoh Modul Pengambilan Log dari Database
 ```
 Model: Log_model.php
+```
 
 ```php
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+```
 
 class Log_model extends CI_Model {
 
@@ -1608,10 +1771,12 @@ class Log_model extends CI_Model {
 }
 ```
 Controller: Logs.php
+```
 
 ```php
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+```
 
 class Logs extends CI_Controller {
 
@@ -1623,6 +1788,7 @@ class Logs extends CI_Controller {
 }
 ```
 View: logs_view.php
+```
 
 ```php
 <h3>Daftar Log Aplikasi</h3>
@@ -1637,12 +1803,14 @@ View: logs_view.php
     </tr>
     <?php endforeach; ?>
 </table>
+```
 
 # Kompetensi 19
 
 ### 1.1 Referensi standar keamanan informasi diidentifikasi.
 Identifikasi standar yang relevan untuk melindungi aset informasi organisasi.
 
+```
 ```
 Contoh Standar yang digunakan:
 
@@ -1653,6 +1821,7 @@ COBIT: framework untuk tata kelola dan manajemen TI.
 NIST Cybersecurity Framework: panduan keamanan siber.
 
 ```
+```
 Contoh Penerapan:
 Organisasi memilih SNI-ISO 27001 sebagai acuan untuk pengelolaan risiko keamanan informasi.
 
@@ -1661,6 +1830,7 @@ Setelah standar diidentifikasi, dibuat rencana prioritas penerapan (misalnya tah
 
 Persetujuan dari manajemen diperlukan agar standar dapat diterapkan secara efektif.
 
+```
 ```
 Contoh:
 
@@ -1671,6 +1841,7 @@ Pimpinan menyetujui prioritas ini melalui rapat manajemen.
 ### 2.1 Daftar komponen pokok standar keamanan untuk kebutuhan organisasi disusun.
 Susun daftar kontrol keamanan utama dari standar (misalnya ISO 27001, COBIT) yang relevan dengan organisasi.
 
+```
 ```
 Contoh Komponen ISO 27001:
 
@@ -1683,6 +1854,7 @@ Pengelolaan aset TI dan enkripsi data.
 Prosedur penanganan insiden keamanan.
 
 ```
+```
 Contoh Penerapan:
 Organisasi e-commerce menyusun daftar kontrol seperti proteksi data pelanggan, backup sistem, dan audit akses pengguna.
 
@@ -1691,6 +1863,7 @@ Lakukan analisis apakah setiap kontrol dapat diterapkan dengan efektif.
 
 Berikan rekomendasi langkah strategis yang perlu dilakukan.
 
+```
 ```
 Contoh Rekomendasi:
 
@@ -1705,6 +1878,7 @@ Rekomendasi: Terapkan enkripsi AES-256 untuk database sensitif.
 ### 3.1 Rincian pekerjaan untuk setiap peran/jabatan dalam organisasi dan akuntabilitas informasi untuk masing-masing peran/jabatan tersebut diidentifikasi.
 Identifikasi role (peran) dalam organisasi serta hak akses yang sesuai untuk keamanan informasi.
 
+```
 ```
 Contoh Skema Role-Based Access Control (RBAC):
 
@@ -1728,6 +1902,7 @@ Pembatasan akses data berdasarkan peran.
 Pelaporan insiden keamanan.
 
 ```
+```
 Contoh Penerapan:
 
 Buat dokumen SOP keamanan informasi yang mengatur siapa yang dapat mengakses database, siapa yang bertanggung jawab atas backup, dan siapa yang menangani insiden siber.
@@ -1739,6 +1914,7 @@ Analisis dampak bisnis dilakukan untuk melihat konsekuensi jika risiko terjadi.
 
 Rencana mitigasi dibuat untuk meminimalkan dampak risiko.
 
+```
 ```
 Contoh Penerapan:
 
@@ -1752,6 +1928,7 @@ Mitigasi: Backup rutin, patch keamanan, pelatihan karyawan.
 Pilih standar keamanan yang sesuai dengan kebutuhan organisasi.
 
 ```
+```
 Contoh Standar yang dapat dipilih:
 
 ISO/IEC 27001 → untuk sistem manajemen keamanan informasi (SMKI).
@@ -1760,6 +1937,7 @@ COBIT → untuk tata kelola TI.
 
 NIST CSF → untuk framework keamanan siber.
 
+```
 ```
 Contoh Penerapan:
 Perusahaan memilih ISO 27001 sebagai acuan untuk kebijakan keamanan, karena sesuai dengan kebutuhan sertifikasi internasional.
@@ -1771,12 +1949,14 @@ Keomptensi 20
 Pelajari dokumen proyek (flow navigasi, requirement teknis, dan tujuan aplikasi).
 
 ```
+```
 Contoh: Developer membaca dokumen proyek aplikasi e-learning yang berisi struktur menu, kebutuhan fitur, dan spesifikasi teknis.
 
 ### 1.2 Konsep dan spesifikasi didiskusikan dengan personel terkait untuk mengetahui konsep atau metafora desain.
 
 Lakukan diskusi dengan tim (UI/UX designer, developer, client) untuk menentukan gaya interface.
 
+```
 ```
 Contoh: Tim sepakat menggunakan metafora desain card UI untuk aplikasi e-commerce.
 
@@ -1785,13 +1965,16 @@ Contoh: Tim sepakat menggunakan metafora desain card UI untuk aplikasi e-commerc
 Evaluasi budget, kendala teknologi (misalnya keterbatasan perangkat), dan ketersediaan sumber daya (designer, tools).
 
 ```
+```
 Contoh: Desain harus ringan karena target pengguna memakai smartphone low-end.
 
 ### 1.4 Kebutuhan klien dan pengguna/audience diklarifikasi untuk menentukan format interface yang digunakan.
 Pastikan interface sesuai dengan kebutuhan pengguna akhir dan ekspektasi klien.
 
 ```
+```
 Contoh: Klien menginginkan aplikasi berbasis mobile-first dengan navigasi sederhana untuk pengguna awam.
 
 
+```
 ```
